@@ -32,7 +32,7 @@ jobs:
         if: success() || failure()    
         with:
           name:  Java Tests            
-          path: "**/targets/*-reports/TEST-*.xml"  
+          path: "**/target/*-reports/TEST-*.xml"  
           reporter: java-junit   
       
       
