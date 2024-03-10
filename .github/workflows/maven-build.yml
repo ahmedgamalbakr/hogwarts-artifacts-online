@@ -28,7 +28,7 @@ jobs:
 
 
       - name: List xml files 
-        run: ls **/target/*-reports/TEST-*.xml
+        run: ls -lrtah **/target/*-reports/
 
 
       - name: Test Report
