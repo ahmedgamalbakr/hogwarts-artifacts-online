@@ -25,10 +25,12 @@ jobs:
           cache: maven
       - name: Build and test with Maven
         run: mvn --batch-mode package
-
+      
 
       - name: List xml files 
-        run: ls -lrtah **/target/*-reports/
+        run: |
+            cd target/*-reports
+            ls  target/*-reports/
 
 
       - name: Test Report
