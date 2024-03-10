@@ -28,7 +28,9 @@ jobs:
       
       - name: List test result files
         run: |
-          find . -type f -name "*.xml" -path "**/target/*-reports/TEST-*.xml" -print
+          # find . -type f -name "*.xml" -path "**/target/*-reports/TEST-*.xml" -print
+          find . -type f -name "*.xml" -path "**/target/*-reports/TEST-*.xml" -exec sh -c 'echo $(pwd)/{}' \;
+
       
 
 
