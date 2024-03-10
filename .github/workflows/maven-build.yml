@@ -26,11 +26,9 @@ jobs:
       - name: Build and test with Maven
         run: mvn --batch-mode package
       
-
-      - name: List xml files 
-        run: |
-            cd /home/runner/work/hogwarts-artifacts-online/hogwarts-artifacts-online/
-            ls  ls -lrtah
+      - name: List XML files
+        run: ls -R **/target/*-reports/TEST-*.xml
+      
 
 
       - name: Test Report
