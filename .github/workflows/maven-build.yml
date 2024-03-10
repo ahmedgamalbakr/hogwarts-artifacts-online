@@ -29,8 +29,8 @@ jobs:
 
       - name: List xml files 
         run: |
-            cd target/*-reports
-            ls  target/*-reports/
+            cd hogwarts-artifacts-online/target/
+            ls  ls -lrtah
 
 
       - name: Test Report
