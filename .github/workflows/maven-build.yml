@@ -26,8 +26,9 @@ jobs:
       - name: Build and test with Maven
         run: mvn --batch-mode package
       
-      - name: List XML files
-        run: ls -R **/target/*-reports/TEST-*.xml
+      - name: List test result files
+        run: |
+          find . -type f -name "*.xml" -path "**/target/*-reports/TEST-*.xml" -print
       
 
 
@@ -40,10 +41,10 @@ jobs:
           reporter: java-junit   
       
       
-      # - name: Publish Test Report
-      #   uses: mikepenz/action-junit-report@v4
-      #   if: success() || failure() 
-      #   with:
-      #     report_paths: '**/target/*-reports/TEST-*.xml'
+      - name: Publish Test Report
+        uses: mikepenz/action-junit-report@v4
+        if: success() || failure() 
+        with:
+          report_paths: '**/target/*-reports/TEST-*.xml'
         
 
