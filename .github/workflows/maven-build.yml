@@ -44,7 +44,7 @@ jobs:
         if: success() || failure()    
         with:
           name:  Java Tests            
-          path: "**/target/*-reports/TEST-*.xml"  
+          path: "target/TEST-*.xml"  
           reporter: java-junit   
           fail-on-empty: 'false'
       
