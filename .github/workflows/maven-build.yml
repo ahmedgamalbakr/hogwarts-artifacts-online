@@ -23,12 +23,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: maven
+      
 
-      - name: Set up Maven
-        uses: stCarolas/setup-maven@v4.5
-        with:
-          maven-version: 3.8.2
+      # - name: Set up Maven
+      #   uses: stCarolas/setup-maven@v4.5
+      #   with:
+      #     maven-version: 3.8.2
 
       - name: Checkout common workflows repository
         uses: actions/checkout@v3
@@ -41,14 +41,14 @@ jobs:
       
       - name: List test result files
         run: |
-          # find . -type f -name "*.xml" -path "**/target/*-reports/TEST-*.xml" -print
+          
           find . -type f -name "*.xml" -path "**/target/*-reports/TEST-*.xml" -exec sh -c 'echo $(pwd)/{}' \;
 
-      - name: Archive test results
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-results
-          path: '**/target/*-reports/TEST-*.xml'
+      # - name: Archive test results
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: test-results
+      #     path: '**/target/*-reports/TEST-*.xml'
       
 
 
