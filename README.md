@@ -18,6 +18,8 @@ Whether you're new to Spring Boot or an experienced developer looking to add som
 
 Through my YouTube course, you will gain practical experience in:
 
+
+
 - **Dependency Injection** and the use of Spring Framework's core container.
 - Building the web layer with **Spring MVC (Model-View-Controller)**.
 - Data persistence in relational databases using **Spring Data JPA (Jakarta Persistence API)**.
